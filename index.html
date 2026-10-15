@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Jenny 的網站總覽</title>
+<meta name="description" content="總經研究、債市部位追蹤與其他自建網站的入口。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23171B22'/%3E%3Cg stroke='%233C8EA0' stroke-width='6' stroke-linecap='round'%3E%3Cpath d='M16 44V26M32 44V16M48 44V34'/%3E%3C/g%3E%3C/svg%3E">
+<style>
+  :root{
+    --bg:#0E1116; --card:#171B22; --card2:#1D222B; --border:#2A303A;
+    --text:#E8EAED; --text2:#9AA3AF; --text3:#6B7280;
+    --radius:14px;
+    --mono:"Fira Code",ui-monospace,SFMono-Regular,Consolas,monospace;
+    --sans:system-ui,-apple-system,"Noto Sans TC","Microsoft JhengHei",sans-serif;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0; background:var(--bg); color:var(--text); font-family:var(--sans);
+    font-size:15px; line-height:1.65;
+    padding:
+      calc(env(safe-area-inset-top,0px) + 40px) 20px
+      calc(env(safe-area-inset-bottom,0px) + 56px);
+  }
+  .wrap{max-width:1020px;margin:0 auto}
+
+  header{border-bottom:1px solid var(--border);padding-bottom:22px;margin-bottom:34px}
+  h1{margin:0 0 8px;font-size:26px;font-weight:650;letter-spacing:.01em}
+  .sub{margin:0;color:var(--text2);font-size:14px}
+  .counts{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px}
+  .pill{
+    font-family:var(--mono);font-size:11.5px;color:var(--text2);
+    background:var(--card);border:1px solid var(--border);
+    border-radius:999px;padding:3px 10px;white-space:nowrap
+  }
+
+  section{margin-bottom:38px}
+  .sec-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:10px;margin-bottom:14px}
+  h2{margin:0;font-size:15px;font-weight:650;color:var(--text)}
+  .sec-note{margin:0;font-size:12.5px;color:var(--text3)}
+
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}
+
+  .card{
+    display:block;position:relative;overflow:hidden;
+    background:var(--card);border:1px solid var(--border);border-radius:var(--radius);
+    padding:18px 18px 16px;text-decoration:none;color:inherit;
+    transition:background .14s ease,border-color .14s ease,transform .14s ease
+  }
+  .card::before{
+    content:"";position:absolute;inset:0 auto 0 0;width:3px;background:var(--accent,var(--border))
+  }
+  .card:hover,.card:focus-visible{
+    background:var(--card2);border-color:#3A424F;transform:translateY(-2px);outline:none
+  }
+  .card:focus-visible{box-shadow:0 0 0 2px var(--accent,#3C8EA0)}
+
+  .card-top{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
+  .name{font-size:16.5px;font-weight:650;line-height:1.35}
+  .lock{
+    flex:none;font-family:var(--mono);font-size:10.5px;letter-spacing:.02em;
+    color:var(--text2);background:var(--bg);border:1px solid var(--border);
+    border-radius:6px;padding:2px 7px;white-space:nowrap
+  }
+  .lock.open{color:var(--text3)}
+  .repo{font-family:var(--mono);font-size:11.5px;color:var(--text3);margin-top:3px}
+  .desc{margin:11px 0 0;color:var(--text2);font-size:14px}
+  .scope{margin:9px 0 0;color:var(--text3);font-size:12.5px;line-height:1.55}
+  .foot{
+    margin-top:13px;padding-top:11px;border-top:1px solid var(--border);
+    display:flex;flex-wrap:wrap;align-items:center;gap:8px
+  }
+  .freq{font-family:var(--mono);font-size:11px;color:var(--text3)}
+  .go{margin-left:auto;font-size:12.5px;color:var(--text2)}
+
+  .sources{margin-top:10px;font-size:12px;color:var(--text3)}
+  .sources a{color:var(--text3);text-decoration:none;border-bottom:1px dotted var(--border)}
+  .sources a:hover{color:var(--text2)}
+
+  footer{
+    border-top:1px solid var(--border);padding-top:20px;margin-top:8px;
+    color:var(--text3);font-size:12.5px
+  }
+  footer p{margin:0 0 6px}
+  code{font-family:var(--mono);font-size:11.5px;color:var(--text2)}
+
+  @media (max-width:520px){
+    body{padding-left:16px;padding-right:16px}
+    h1{font-size:22px}
+    .grid{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Jenny 的網站總覽</h1>
+    <p class="sub">總經研究、債市部位追蹤與其他自建網站的入口。</p>
+    <div class="counts" id="counts"></div>
+  </header>
+
+  <main id="app">
+    <p style="color:var(--text3)">載入中…</p>
+  </main>
+
+  <footer>
+    <p>標示 <code>需要密碼</code> 的站台進去後要輸入各自的密碼，密碼不列在這一頁。</p>
+    <p>要新增站台：編輯 <code>sites.json</code> 後 push，約一分鐘生效。</p>
+    <p id="updated"></p>
+  </footer>
+</div>
+
+<script>
+const app = document.getElementById('app');
+
+function el(tag, cls, text){
+  const n = document.createElement(tag);
+  if (cls) n.className = cls;
+  if (text != null) n.textContent = text;
+  return n;
+}
+
+function card(item){
+  const a = el('a', 'card');
+  a.href = item.url;
+  if (item.accent) a.style.setProperty('--accent', item.accent);
+
+  const top = el('div', 'card-top');
+  const left = el('div');
+  left.append(el('div', 'name', item.name));
+  left.append(el('div', 'repo', item.repo));
+  top.append(left);
+
+  const badge = el('span', item.gated ? 'lock' : 'lock open',
+                   item.gated ? '🔒 需要密碼' : '公開');
+  top.append(badge);
+  a.append(top);
+
+  a.append(el('p', 'desc', item.desc));
+  if (item.scope) a.append(el('p', 'scope', item.scope));
+
+  const foot = el('div', 'foot');
+  if (item.freq) foot.append(el('span', 'freq', item.freq));
+  foot.append(el('span', 'go', item.isRepo ? '看 GitHub repo →' : '打開網站 →'));
+  a.append(foot);
+
+  return a;
+}
+
+function render(data){
+  app.textContent = '';
+  let total = 0, gated = 0;
+
+  for (const g of data.groups){
+    const sec = el('section');
+    const head = el('div', 'sec-head');
+    head.append(el('h2', null, g.title));
+    if (g.note) head.append(el('p', 'sec-note', g.note));
+    sec.append(head);
+
+    const grid = el('div', 'grid');
+    for (const item of g.items){
+      grid.append(card(item));
+      total++;
+      if (item.gated) gated++;
+    }
+    sec.append(grid);
+    app.append(sec);
+  }
+
+  const counts = document.getElementById('counts');
+  counts.append(el('span', 'pill', total + ' 個站'));
+  counts.append(el('span', 'pill', gated + ' 個需要密碼'));
+  counts.append(el('span', 'pill', '清單更新 ' + data.updated));
+
+  document.getElementById('updated').textContent = '清單最後整理：' + data.updated;
+  document.title = 'Jenny 的網站總覽';
+}
+
+fetch('sites.json', {cache: 'no-cache'})
+  .then(r => { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+  .then(render)
+  .catch(err => {
+    app.textContent = '';
+    const p = el('p', null, '站清單載入失敗（' + err.message + '）。請確認 sites.json 存在且格式正確。');
+    p.style.color = '#E06C5A';
+    app.append(p);
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+{
+  "comment": "站清單。以後新站就在對應 group 的 items 加一筆。欄位說明：name=中文站名／repo=GitHub repo 名／url=網址（private 無網頁時填 repo 網址）／desc=一句用途／scope=涵蓋範圍／freq=更新頻率／gated=是否需要密碼／accent=卡片色條／repoUrl=原始碼連結",
+  "updated": "2026-10-15",
+  "groups": [
+    {
+      "title": "總經與債市研究",
+      "note": "每日／每週自動更新，資料來自各國官方來源",
+      "items": [
+        {
+          "name": "美國總經指標手冊",
+          "repo": "us-macro-guide",
+          "url": "https://jennycheng9191-code.github.io/us-macro-guide/",
+          "desc": "美國總經指標速查，一指標一卡附最新值與走勢",
+          "scope": "58 卡／通膨・勞動・薪資・經濟活動・消費信心・房市・財政發債・金融條件",
+          "freq": "每日自動更新",
+          "gated": true,
+          "accent": "#D85A30",
+          "repoUrl": "https://github.com/jennycheng9191-code/us-macro-guide"
+        },
+        {
+          "name": "美國數據分項分析",
+          "repo": "us-macro-detail",
+          "url": "https://jennycheng9191-code.github.io/us-macro-detail/",
+          "desc": "七大指標的拆項與貢獻度，看數據是誰在推",
+          "scope": "7 分頁 67 拆項／GDP・CPI・PCE・NFP・ISM 製造・ISM 服務・零售銷售",
+          "freq": "每日自動更新",
+          "gated": true,
+          "accent": "#185FA5",
+          "repoUrl": "https://github.com/jennycheng9191-code/us-macro-detail"
+        },
+        {
+          "name": "澳洲總經指標手冊",
+          "repo": "au-macro-guide",
+          "url": "https://jennycheng9191-code.github.io/au-macro-guide/",
+          "desc": "澳洲版指標速查，排程跟澳洲發布節奏",
+          "scope": "41 卡／八面向，資料來自 ABS・RBA・AOFM",
+          "freq": "每日自動更新",
+          "gated": true,
+          "accent": "#3C8EA0",
+          "repoUrl": "https://github.com/jennycheng9191-code/au-macro-guide"
+        },
+        {
+          "name": "部位與波動追蹤",
+          "repo": "ust-positioning",
+          "url": "https://jennycheng9191-code.github.io/ust-positioning/",
+          "desc": "看各類交易人站在哪一邊，部位極端度與已實現波動",
+          "scope": "美債六檔・原油 WTI・金銀／CFTC COT 週報三套分類法",
+          "freq": "每週六自動更新",
+          "gated": true,
+          "accent": "#7A8B2F",
+          "repoUrl": "https://github.com/jennycheng9191-code/ust-positioning"
+        }
+      ]
+    },
+    {
+      "title": "資料層",
+      "note": "沒有網頁介面，是上面那些站的地基",
+      "items": [
+        {
+          "name": "六國公債殖利率資料倉",
+          "repo": "bond-yields",
+          "url": "https://github.com/jennycheng9191-code/bond-yields",
+          "desc": "美德英西日澳日頻殖利率長表，技術分析網頁的地基",
+          "scope": "107 萬列歷史，最早到 1974 年／private repo，無公開網頁",
+          "freq": "每日三批自動更新",
+          "gated": false,
+          "isRepo": true,
+          "accent": "#534AB7",
+          "repoUrl": "https://github.com/jennycheng9191-code/bond-yields"
+        }
+      ]
+    },
+    {
+      "title": "其他",
+      "note": "",
+      "items": [
+        {
+          "name": "轉回好心情",
+          "repo": "good-mood",
+          "url": "https://jennycheng9191-code.github.io/good-mood/",
+          "desc": "抽卡網頁：抽一句短句、一個好方法、一句經典好句",
+          "scope": "325 則素材／可公開分享",
+          "freq": "改素材才更新",
+          "gated": false,
+          "accent": "#D9A441",
+          "repoUrl": "https://github.com/jennycheng9191-code/good-mood"
+        }
+      ]
+    }
+  ]
+}
