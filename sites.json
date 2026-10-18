@@ -1,6 +1,6 @@
 {
   "comment": "站清單。以後新站就在對應 group 的 items 加一筆。欄位說明：name=中文站名／repo=GitHub repo 名／url=網址（private 無網頁時填 repo 網址）／desc=一句用途／scope=涵蓋範圍／freq=更新頻率／gated=是否需要密碼／accent=卡片色條／repoUrl=原始碼連結",
-  "updated": "2026-10-15",
+  "updated": "2026-10-18",
   "groups": [
     {
       "title": "總經與債市研究",
@@ -84,6 +84,17 @@
           "gated": false,
           "accent": "#D9A441",
           "repoUrl": "https://github.com/jennycheng9191-code/good-mood"
+        },
+        {
+          "name": "讀經闖關",
+          "repo": "classics-quest",
+          "url": "https://jennycheng9191-code.github.io/classics-quest/",
+          "desc": "讀經班小朋友用平板闖關背經典，三種題型、三個年級、排行榜",
+          "scope": "《大學》12 關／幼兒園・低年級・高年級，可公開分享",
+          "freq": "改經文才更新",
+          "gated": false,
+          "accent": "#B8432F",
+          "repoUrl": "https://github.com/jennycheng9191-code/classics-quest"
         }
       ]
     }
