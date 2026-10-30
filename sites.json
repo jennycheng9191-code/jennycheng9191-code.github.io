@@ -95,6 +95,17 @@
           "gated": false,
           "accent": "#B8432F",
           "repoUrl": "https://github.com/jennycheng9191-code/classics-quest"
+        },
+        {
+          "name": "數獨樂園",
+          "repo": "sudoku",
+          "url": "https://jennycheng9191-code.github.io/sudoku/",
+          "desc": "給小朋友玩的數獨，題目自動產生玩不完，填錯即時標紅、提示一格、星星紀錄",
+          "scope": "4×4／6×6／9×9 × 初階・中階・高階，可公開分享",
+          "freq": "不需更新",
+          "gated": false,
+          "accent": "#4F6FB0",
+          "repoUrl": "https://github.com/jennycheng9191-code/sudoku"
         }
       ]
     }
